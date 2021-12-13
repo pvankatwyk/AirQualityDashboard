@@ -6,9 +6,9 @@ import requests # add layer by arn: arn:aws:lambda:us-west-1:770693421928:layer:
 def lambda_handler(event, context):
     # LAMBDA FOR UPDATING DATABASE
     rds_host = "airquality.ce6w097amgsa.us-west-1.rds.amazonaws.com"
-    name = "postgres"
-    password = "L2PnKR!&M2eGL5"
-    db_name = "postgres"
+    name = ""
+    password = ""
+    db_name = ""
 
     conn = psycopg2.connect(host=rds_host,
                             database=db_name,
