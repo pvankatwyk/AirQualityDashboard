@@ -51,9 +51,12 @@ def query_database(query):
     :return rows: (list of lists) all rows returned from sql query
     """
     rds_host = "airquality.ce6w097amgsa.us-west-1.rds.amazonaws.com"
-    name = "" # these values are hidden for public repo for
-    password = "" # more information on connecting to the
-    db_name = "" # database, contact me directly!
+    # name = "" # these values are hidden for public repo for
+    # password = "" # more information on connecting to the
+    # db_name = "" # database, contact me directly!
+    name = "postgres"
+    password = "L2PnKR!&M2eGL5"
+    db_name = "postgres"
 
     conn = psycopg2.connect(host=rds_host,
                             database=db_name,
@@ -239,9 +242,9 @@ app.layout = \
                                                 id='date-picker',
                                                 start_date=date(2021, 1, 1),
                                                 min_date_allowed=date(2021, 1, 1),
-                                                max_date_allowed=date.today(),
-                                                initial_visible_month=date.today(),
-                                                end_date=date.today(),
+                                                max_date_allowed=date(2021, 12, 31),
+                                                initial_visible_month=date(2021, 12, 31),
+                                                end_date=date(2021, 12, 31),
                                                 className='DateRangePickerInput',
                                             ),
                                         ],
